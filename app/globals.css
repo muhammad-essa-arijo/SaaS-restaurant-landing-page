@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-charcoal-900 antialiased;
+  }
+
+  h1 {
+    @apply font-serif text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply font-serif text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply font-serif text-2xl font-semibold tracking-tight md:text-3xl;
+  }
+
+  h4 {
+    @apply font-serif text-xl font-semibold tracking-tight md:text-2xl;
+  }
+
+  h5 {
+    @apply font-serif text-lg font-semibold;
+  }
+
+  h6 {
+    @apply font-serif font-semibold;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-md {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-sm {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-title {
+    @apply mb-12 text-center md:mb-16 lg:mb-20;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-charcoal-900 to-gold-700 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md border border-white/20 bg-white/10;
+  }
+
+  .glass-effect-dark {
+    @apply backdrop-blur-md border border-charcoal-900/20 bg-charcoal-900/10;
+  }
+
+  .button-base {
+    @apply relative inline-flex items-center justify-center font-medium transition-all duration-300 font-sans;
+  }
+
+  .button-ripple {
+    @apply relative overflow-hidden;
+  }
+
+  .card-base {
+    @apply rounded-2xl border border-charcoal-100 bg-white shadow-soft-lg transition-all duration-300 p-6;
+  }
+
+  .card-hover {
+    @apply hover:shadow-soft-xl hover:border-gold-300 hover:-translate-y-1;
+  }
+
+  .input-base {
+    @apply w-full rounded-lg border border-charcoal-200 bg-white px-4 py-3 font-sans text-charcoal-900 placeholder-charcoal-400 transition-all duration-200 focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20;
+  }
+
+  .link-underline {
+    @apply relative transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gold-500 after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-charcoal-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gold-400 transition-colors duration-300 hover:bg-gold-500;
+}
+
+/* Selection */
+::selection {
+  @apply bg-gold-500 text-white;
+}
+
+::-moz-selection {
+  @apply bg-gold-500 text-white;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-charcoal-900 text-cream-100;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-charcoal-800;
+  }
+}
