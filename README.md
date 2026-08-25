@@ -1,4 +1,4 @@
-# Luxe Restaurant - Premium SaaS Landing Page
+# Luxe Restaurant - Modern SaaS Landing Page
 
 A production-ready, premium fine dining restaurant SaaS landing page built with modern technologies and professional design patterns.
 
